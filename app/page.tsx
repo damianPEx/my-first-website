@@ -44,11 +44,11 @@ export default function Page() {
                   <Button asChild size="lg">
                     <Link href="#join">Join the Fan Club</Link>
                   </Button>
-
-                  <p className="text-sm text-muted-foreground">
-                    Free, friendly, and mildly technical.
-                  </p>
                 </div>
+
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Free, friendly, and mildly technical.
+                </p>
               </div>
 
               <div className="relative">
@@ -97,22 +97,24 @@ export default function Page() {
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <Card className="shadow-sm">
-              <CardHeader>
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <Code2 className="h-5 w-5" />
+            <Link href="/jokes">
+              <Card className="shadow-sm transition-all hover:border-[#ff8800] hover:shadow-[0_0_12px_#ff8800]">
+                <CardHeader>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <Code2 className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <CardTitle>Sitcom-level IT humor</CardTitle>
+                      <CardDescription>
+                        Share your favorite lines and moments from the show:
+                        light, snappy, and always on brand.
+                      </CardDescription>
+                    </div>
                   </div>
-                  <div>
-                    <CardTitle>Sitcom-level IT humor</CardTitle>
-                    <CardDescription>
-                      Share your favorite lines and moments from the show:
-                      light, snappy, and always on brand.
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
+                </CardHeader>
+              </Card>
+            </Link>
 
             <Card className="shadow-sm">
               <CardHeader>

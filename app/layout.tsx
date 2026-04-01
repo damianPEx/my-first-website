@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Press_Start_2P } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const pressStart = Press_Start_2P({
@@ -24,7 +25,34 @@ export default function RootLayout({
       lang="en"
       className={`${pressStart.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <nav
+          style={{
+            backgroundColor: "#ff8800",
+            borderBottom: "3px solid #cc6600",
+            boxShadow: "0 3px 0px #cc6600",
+          }}
+          className="sticky top-0 z-50 w-full px-6 py-3"
+        >
+          <div className="mx-auto flex max-w-6xl items-center justify-end gap-6">
+            <Link
+              href="/"
+              style={{ color: "#000000", textShadow: "1px 1px 0px #cc6600" }}
+              className="text-xs transition-opacity hover:opacity-70"
+            >
+              HOME
+            </Link>
+            <Link
+              href="/jokes"
+              style={{ color: "#000000", textShadow: "1px 1px 0px #cc6600" }}
+              className="text-xs transition-opacity hover:opacity-70"
+            >
+              QUOTES
+            </Link>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
