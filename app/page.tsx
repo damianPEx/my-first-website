@@ -1,64 +1,217 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+import { HeroParallaxArt } from "@/components/hero-parallax-art";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+import { Code2, Sparkles, Users } from "lucide-react";
+
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="flex min-h-full flex-col">
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background">
+          <HeroParallaxArt>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/it-crowd-fire.png"
+              alt=""
+              className="h-auto w-[min(691px,90vw)] max-w-none sm:w-[min(691px,78vw)]"
+              width={691}
+              height={864}
+              sizes="(max-width: 768px) 90vw, 691px"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </HeroParallaxArt>
+
+          <div className="relative z-10 mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+            <div className="grid items-center gap-10 lg:grid-cols-2">
+              <div>
+                <p className="text-sm font-medium text-muted-foreground">
+                  For fans of the show
+                </p>
+                <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                  The IT Crowd Fan Page
+                </h1>
+                <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
+                  Share memes, quote the classics, and find your people. Bring the
+                  chaos of IT comedy into one place—no nonsense, just good jokes.
+                </p>
+
+                <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+                  <Button asChild size="lg">
+                    <Link href="#join">Join the Fan Club</Link>
+                  </Button>
+
+                  <p className="text-sm text-muted-foreground">
+                    Free, friendly, and mildly technical.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-6 -top-6 h-24 w-24 rounded-2xl bg-primary/10 blur-2xl" />
+                <div className="absolute -bottom-10 -right-6 h-28 w-28 rounded-2xl bg-secondary/10 blur-2xl" />
+
+                <div className="relative rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <h2 className="text-lg font-medium">Today’s vibe</h2>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    “Have you tried turning it off and on again?” but make it
+                    community.
+                  </p>
+
+                  <ul className="mt-6 space-y-3 text-sm">
+                    <li className="flex gap-3">
+                      <span className="mt-0.5 inline-flex h-2 w-2 shrink-0 rounded-full bg-primary" />
+                      <span>Episode quote threads</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-0.5 inline-flex h-2 w-2 shrink-0 rounded-full bg-primary" />
+                      <span>Tech humor meets fandom</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-0.5 inline-flex h-2 w-2 shrink-0 rounded-full bg-primary" />
+                      <span>Friendly rules (mostly)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section id="features" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium text-muted-foreground">
+              What you’ll find here
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+              Three reasons to join in
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              A small page with big laughs—built for browsing on any device.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Card className="shadow-sm">
+              <CardHeader>
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Code2 className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <CardTitle>Sitcom-level IT humor</CardTitle>
+                    <CardDescription>
+                      Share your favorite lines and moments from the show:
+                      light, snappy, and always on brand.
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="shadow-sm">
+              <CardHeader>
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <CardTitle>Community hangouts</CardTitle>
+                    <CardDescription>
+                      Connect with other fans. Swap memes, recommend episodes,
+                      and celebrate the chaos together.
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <Card className="shadow-sm">
+              <CardHeader>
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Sparkles className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <CardTitle>Fresh meme energy</CardTitle>
+                    <CardDescription>
+                      Keep the jokes coming with weekly prompts and
+                      &quot;quote of the moment&quot; posts.
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+          </div>
+        </section>
+
+        {/* Footer / Contact */}
+        <footer
+          id="join"
+          className="border-t border-border bg-background"
+        >
+          <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+            <div className="grid gap-8 md:grid-cols-2 md:items-start">
+              <div>
+                <h2 className="text-lg font-semibold">Contact</h2>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Want to collaborate or share your best IT Crowd quotes?
+                  Reach out—we read everything.
+                </p>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
+                  <p className="text-xs font-medium text-muted-foreground">
+                    Email
+                  </p>
+                  <a
+                    className="mt-1 block text-sm font-medium underline underline-offset-4"
+                    href="mailto:hello@itcrowdfans.dev"
+                  >
+                    hello@itcrowdfans.dev
+                  </a>
+                </div>
+
+                <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
+                  <p className="text-xs font-medium text-muted-foreground">
+                    Discord
+                  </p>
+                  <a
+                    className="mt-1 block text-sm font-medium underline underline-offset-4"
+                    href="https://example.com/discord"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Join the server
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-col gap-2 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-muted-foreground">
+                © {new Date().getFullYear()} IT Crowd Fan Page. All laughs
+                reserved.
+              </p>
+              <Link
+                href="#features"
+                className="text-sm font-medium underline underline-offset-4"
+              >
+                Back to features
+              </Link>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   );
