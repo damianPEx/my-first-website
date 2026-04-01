@@ -1,25 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
-const satoshi = localFont({
-  src: [
-    {
-      path: "./fonts/Satoshi-Regular.woff",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Satoshi-Medium.woff",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Satoshi-Bold.woff",
-      weight: "700",
-      style: "normal",
-    },
-  ],
+const pressStart = Press_Start_2P({
+  weight: "400",
+  subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -37,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${satoshi.variable} h-full antialiased`}
+      className={`${pressStart.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

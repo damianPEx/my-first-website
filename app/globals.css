@@ -52,81 +52,27 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-:root {
-  /* Brand palette (IT Crowd–inspired set) */
-  --palette-honeydew: #cedecd;
-  --palette-slate: #607b80;
-  --palette-jet: #232e2f;
-  --palette-charcoal: #3e4852;
-  --palette-chocolate: #a15717;
-
-  /* Mostly white surfaces; page uses a light gradient on body */
-  --background: #ffffff;
-  --foreground: var(--palette-jet);
-  --card: #ffffff;
-  --card-foreground: var(--palette-jet);
-  --popover: #ffffff;
-  --popover-foreground: var(--palette-jet);
-  --primary: var(--palette-chocolate);
-  --primary-foreground: #faf9f7;
-  --secondary: color-mix(in srgb, var(--palette-honeydew) 55%, white);
-  --secondary-foreground: var(--palette-charcoal);
-  --muted: color-mix(in srgb, var(--palette-honeydew) 38%, white);
-  --muted-foreground: var(--palette-slate);
-  --accent: color-mix(in srgb, var(--palette-slate) 12%, var(--palette-honeydew));
-  --accent-foreground: var(--palette-jet);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: color-mix(in srgb, var(--palette-honeydew) 55%, var(--palette-slate));
-  --input: color-mix(in srgb, var(--palette-honeydew) 50%, var(--palette-slate));
-  --ring: var(--palette-slate);
-  --chart-1: var(--palette-chocolate);
-  --chart-2: var(--palette-slate);
-  --chart-3: var(--palette-charcoal);
-  --chart-4: var(--palette-honeydew);
-  --chart-5: color-mix(in srgb, var(--palette-chocolate) 65%, white);
-  --radius: 0.625rem;
-  --sidebar: color-mix(in srgb, var(--palette-honeydew) 22%, white);
-  --sidebar-foreground: var(--palette-jet);
-  --sidebar-primary: var(--palette-chocolate);
-  --sidebar-primary-foreground: #faf9f7;
-  --sidebar-accent: var(--muted);
-  --sidebar-accent-foreground: var(--palette-charcoal);
-  --sidebar-border: var(--border);
-  --sidebar-ring: var(--palette-slate);
-}
-
-.dark {
-  --background: color-mix(in srgb, var(--palette-jet) 92%, black);
-  --foreground: color-mix(in srgb, var(--palette-honeydew) 88%, white);
-  --card: var(--palette-jet);
-  --card-foreground: color-mix(in srgb, var(--palette-honeydew) 92%, white);
-  --popover: var(--palette-jet);
-  --popover-foreground: color-mix(in srgb, var(--palette-honeydew) 92%, white);
-  --primary: color-mix(in srgb, var(--palette-chocolate) 85%, white);
-  --primary-foreground: var(--palette-jet);
-  --secondary: var(--palette-charcoal);
-  --secondary-foreground: color-mix(in srgb, var(--palette-honeydew) 85%, white);
-  --muted: color-mix(in srgb, var(--palette-charcoal) 70%, black);
-  --muted-foreground: color-mix(in srgb, var(--palette-slate) 55%, white);
-  --accent: var(--palette-charcoal);
-  --accent-foreground: color-mix(in srgb, var(--palette-honeydew) 90%, white);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: color-mix(in srgb, var(--palette-slate) 35%, transparent);
-  --input: color-mix(in srgb, var(--palette-slate) 45%, transparent);
-  --ring: color-mix(in srgb, var(--palette-slate) 70%, white);
-  --chart-1: var(--palette-chocolate);
-  --chart-2: var(--palette-slate);
-  --chart-3: var(--palette-charcoal);
-  --chart-4: var(--palette-honeydew);
-  --chart-5: color-mix(in srgb, var(--palette-chocolate) 75%, white);
-  --sidebar: var(--palette-jet);
-  --sidebar-foreground: color-mix(in srgb, var(--palette-honeydew) 90%, white);
-  --sidebar-primary: color-mix(in srgb, var(--palette-chocolate) 80%, white);
-  --sidebar-primary-foreground: var(--palette-jet);
-  --sidebar-accent: var(--palette-charcoal);
-  --sidebar-accent-foreground: color-mix(in srgb, var(--palette-honeydew) 88%, white);
-  --sidebar-border: color-mix(in srgb, var(--palette-slate) 30%, transparent);
-  --sidebar-ring: var(--palette-slate);
+:root, .dark {
+  /* 80s Arcade Theme */
+  --background: #000000;
+  --foreground: #00ff00;
+  --card: #000000;
+  --card-foreground: #00ff00;
+  --popover: #000000;
+  --popover-foreground: #00ff00;
+  --primary: #00ff00;
+  --primary-foreground: #000000;
+  --secondary: #002200;
+  --secondary-foreground: #00ff00;
+  --muted: #001100;
+  --muted-foreground: #00aa00;
+  --accent: #00ff00;
+  --accent-foreground: #000000;
+  --destructive: #ff0000;
+  --border: #00ff00;
+  --input: #00ff00;
+  --ring: #00ff00;
+  --radius: 0rem;
 }
 
 @layer base {
@@ -136,22 +82,7 @@
   body {
     @apply text-foreground;
     background-color: var(--background);
-    background-image: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--palette-honeydew) 42%, white) 0%,
-      #ffffff 45%,
-      color-mix(in srgb, var(--palette-honeydew) 16%, white) 100%
-    );
-    background-attachment: fixed;
-  }
-
-  .dark body {
-    background-image: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--palette-charcoal) 55%, black) 0%,
-      var(--background) 50%,
-      color-mix(in srgb, var(--palette-jet) 75%, black) 100%
-    );
+    text-shadow: 2px 2px 0px #003300;
   }
   html {
     @apply font-sans;
