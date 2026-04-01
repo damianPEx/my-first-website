@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { HeroParallaxArt } from "@/components/hero-parallax-art";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,17 +17,14 @@ export default function Page() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background">
-          <HeroParallaxArt>
-            <Image
-              src="/it-crowd-fire.png"
-              alt=""
-              className="h-auto w-[min(691px,90vw)] max-w-none sm:w-[min(691px,78vw)]"
-              width={691}
-              height={864}
-              sizes="(max-width: 768px) 90vw, 691px"
-              priority
-            />
-          </HeroParallaxArt>
+          <Image
+            src="/it-crowd-fire.png"
+            alt="Fire Background"
+            className="fixed left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 h-auto w-[min(691px,90vw)] max-w-none sm:w-[min(691px,78vw)] opacity-40 pointer-events-none"
+            width={691}
+            height={864}
+            priority
+          />
 
           <div className="relative z-10 mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
             <div className="grid items-center gap-10 lg:grid-cols-2">
