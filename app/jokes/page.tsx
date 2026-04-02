@@ -75,7 +75,7 @@ export default function JokesPage() {
       </div>
 
       {/* Jokes Grid */}
-      <div className="mx-auto max-w-4xl space-y-12">
+      <div className="mx-auto max-w-4xl space-y-20">
         {jokes.map((joke, i) => (
           <div
             key={i}
@@ -93,7 +93,7 @@ export default function JokesPage() {
 
               {/* Speech bubble */}
               <div
-                className="relative border-4 p-5 bg-black/50 backdrop-blur-sm"
+                className="relative border-4 p-8 bg-black/50 backdrop-blur-sm"
                 style={{
                   borderColor: joke.color,
                   boxShadow: `4px 4px 0px ${joke.color}, inset 0 0 20px rgba(0,0,0,0.8)`,

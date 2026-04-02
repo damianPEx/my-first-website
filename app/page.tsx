@@ -17,8 +17,8 @@ export default function Page() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden bg-transparent">
-          <div className="relative z-10 mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-            <div className="grid items-start gap-10 lg:grid-cols-2 pt-4">
+          <div className="relative z-10 mx-auto max-w-7xl px-8 py-20 sm:px-12 sm:py-32 lg:px-16 lg:py-40">
+            <div className="grid items-start gap-16 lg:grid-cols-2 pt-4">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">
                   For fans of the show
@@ -42,8 +42,8 @@ export default function Page() {
                 </p>
               </div>
 
-              <div className="relative flex flex-col items-end mt-8 lg:mt-10">
-                <div className="absolute -left-6 top-20 h-24 w-24 rounded-2xl bg-primary/10 blur-2xl z-0" />
+              <div className="relative flex flex-col items-end pt-10 sm:pt-14">
+                <div className="absolute -left-6 top-32 h-24 w-24 rounded-2xl bg-primary/10 blur-2xl z-0" />
                 <div className="absolute -bottom-10 -right-6 h-28 w-28 rounded-2xl bg-secondary/10 blur-2xl z-0" />
 
                 <Image
@@ -51,10 +51,10 @@ export default function Page() {
                   alt="IT Crowd Fire"
                   width={691}
                   height={864}
-                  className="w-[60%] h-auto z-20 drop-shadow-[0_-5px_15px_rgba(0,255,0,0.2)] -mb-1 mr-4"
+                  className="w-[60%] h-auto z-20 drop-shadow-[0_-5px_15px_rgba(0,255,0,0.2)] block -mb-[2px] mr-4"
                 />
 
-                <div className="relative w-full rounded-2xl border border-border bg-card p-6 shadow-sm z-10 text-left">
+                <div className="relative w-full rounded-2xl border border-border bg-card backdrop-blur-sm p-10 shadow-sm z-10 text-left">
                   <h2 className="text-lg font-medium">Today’s vibe</h2>
                   <p className="mt-2 text-sm text-muted-foreground">
                     “Have you tried turning it off and on again?” but make it
@@ -82,7 +82,7 @@ export default function Page() {
         </section>
 
         {/* Features */}
-        <section id="features" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+        <section id="features" className="mx-auto max-w-7xl px-8 py-20 sm:px-12 sm:py-32 lg:px-16">
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-muted-foreground">
               What you’ll find here
@@ -132,83 +132,28 @@ export default function Page() {
               </CardHeader>
             </Card>
 
-            <Card className="shadow-sm">
-              <CardHeader>
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <Sparkles className="h-5 w-5" />
+            <Link href="/memes">
+              <Card className="shadow-sm transition-all hover:border-[#ff8800] hover:shadow-[0_0_12px_#ff8800]">
+                <CardHeader>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <Sparkles className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <CardTitle>Fresh meme energy</CardTitle>
+                      <CardDescription>
+                        A gallery of downloadable IT Crowd memes and gifs.
+                        Because words aren't enough.
+                      </CardDescription>
+                    </div>
                   </div>
-                  <div>
-                    <CardTitle>Fresh meme energy</CardTitle>
-                    <CardDescription>
-                      Keep the jokes coming with weekly prompts and
-                      &quot;quote of the moment&quot; posts.
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
+                </CardHeader>
+              </Card>
+            </Link>
           </div>
         </section>
 
-        {/* Footer / Contact */}
-        <footer
-          id="join"
-          className="border-t border-border bg-background"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
-            <div className="flex flex-col gap-6">
-              <div className="max-w-2xl">
-                <h2 className="text-2xl font-semibold">Contact</h2>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Want to collaborate or share your best IT Crowd quotes?
-                  Reach out—we read everything.
-                </p>
-              </div>
 
-              <div className="grid w-full gap-4 sm:grid-cols-2">
-                <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
-                  <p className="text-xs font-medium text-muted-foreground">
-                    Email
-                  </p>
-                  <a
-                    className="mt-1 block text-sm font-medium underline underline-offset-4 break-all sm:break-words"
-                    href="mailto:hello@itcrowdfans.dev"
-                  >
-                    hello@itcrowdfans.dev
-                  </a>
-                </div>
-
-                <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
-                  <p className="text-xs font-medium text-muted-foreground">
-                    Discord
-                  </p>
-                  <a
-                    className="mt-1 block text-sm font-medium underline underline-offset-4 break-words"
-                    href="https://example.com/discord"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Join the server
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 flex flex-col gap-2 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} IT Crowd Fan Page. All laughs
-                reserved.
-              </p>
-              <Link
-                href="#features"
-                className="text-sm font-medium underline underline-offset-4"
-              >
-                Back to features
-              </Link>
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   );
