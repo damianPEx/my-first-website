@@ -54,11 +54,11 @@
 
 :root, .dark {
   /* 80s Arcade Theme */
-  --background: #000000;
+  --background: rgba(0, 0, 0, 0.5);
   --foreground: #00ff00;
-  --card: #000000;
+  --card: rgba(0, 0, 0, 0.5);
   --card-foreground: #00ff00;
-  --popover: #000000;
+  --popover: rgba(0, 0, 0, 0.5);
   --popover-foreground: #00ff00;
   --primary: #00ff00;
   --primary-foreground: #000000;
@@ -81,8 +81,15 @@
   }
   body {
     @apply text-foreground;
-    background-color: var(--background);
+    background-color: #000000;
     text-shadow: 2px 2px 0px #003300;
+  }
+  a {
+    @apply transition-all duration-300 border border-transparent rounded;
+  }
+  a:hover {
+    @apply border-[#ff8800] shadow-[0_0_12px_#ff8800];
+    text-shadow: none;
   }
   html {
     @apply font-sans;

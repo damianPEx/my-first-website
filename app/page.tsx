@@ -158,34 +158,34 @@ export default function Page() {
           className="border-t border-border bg-background"
         >
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
-            <div className="grid gap-8 md:grid-cols-2 md:items-start">
-              <div>
-                <h2 className="text-lg font-semibold">Contact</h2>
+            <div className="flex flex-col gap-6">
+              <div className="max-w-2xl">
+                <h2 className="text-2xl font-semibold">Contact</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Want to collaborate or share your best IT Crowd quotes?
                   Reach out—we read everything.
                 </p>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
+              <div className="grid w-full gap-4 sm:grid-cols-2">
+                <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
                   <p className="text-xs font-medium text-muted-foreground">
                     Email
                   </p>
                   <a
-                    className="mt-1 block text-sm font-medium underline underline-offset-4"
+                    className="mt-1 block text-sm font-medium underline underline-offset-4 break-all sm:break-words"
                     href="mailto:hello@itcrowdfans.dev"
                   >
                     hello@itcrowdfans.dev
                   </a>
                 </div>
 
-                <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
+                <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
                   <p className="text-xs font-medium text-muted-foreground">
                     Discord
                   </p>
                   <a
-                    className="mt-1 block text-sm font-medium underline underline-offset-4"
+                    className="mt-1 block text-sm font-medium underline underline-offset-4 break-words"
                     href="https://example.com/discord"
                     target="_blank"
                     rel="noreferrer"
