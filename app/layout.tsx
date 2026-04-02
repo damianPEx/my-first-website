@@ -26,6 +26,14 @@ export default function RootLayout({
       className={`${pressStart.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">
+        {/* Synthwave Background Elements */}
+        <div className="bg-synthwave">
+          <div className="bg-synthwave-stars" />
+          <div className="bg-synthwave-horizon" />
+          <div className="bg-synthwave-grid" />
+          <div className="bg-synthwave-vignette" />
+        </div>
+
         <nav
           style={{
             backgroundColor: "#ff8800",

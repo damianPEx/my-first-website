@@ -16,18 +16,9 @@ export default function Page() {
     <div className="flex min-h-full flex-col">
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background">
-          <Image
-            src="/it-crowd-fire.png"
-            alt="Fire Background"
-            className="fixed left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 h-auto w-[min(691px,90vw)] max-w-none sm:w-[min(691px,78vw)] opacity-40 pointer-events-none"
-            width={691}
-            height={864}
-            priority
-          />
-
+        <section className="relative overflow-hidden bg-transparent">
           <div className="relative z-10 mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-            <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div className="grid items-start gap-10 lg:grid-cols-2 pt-4">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">
                   For fans of the show
@@ -51,11 +42,19 @@ export default function Page() {
                 </p>
               </div>
 
-              <div className="relative">
-                <div className="absolute -left-6 -top-6 h-24 w-24 rounded-2xl bg-primary/10 blur-2xl" />
-                <div className="absolute -bottom-10 -right-6 h-28 w-28 rounded-2xl bg-secondary/10 blur-2xl" />
+              <div className="relative flex flex-col items-end mt-8 lg:mt-10">
+                <div className="absolute -left-6 top-20 h-24 w-24 rounded-2xl bg-primary/10 blur-2xl z-0" />
+                <div className="absolute -bottom-10 -right-6 h-28 w-28 rounded-2xl bg-secondary/10 blur-2xl z-0" />
 
-                <div className="relative rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <Image
+                  src="/it-crowd-fire.png"
+                  alt="IT Crowd Fire"
+                  width={691}
+                  height={864}
+                  className="w-[60%] h-auto z-20 drop-shadow-[0_-5px_15px_rgba(0,255,0,0.2)] -mb-1 mr-4"
+                />
+
+                <div className="relative w-full rounded-2xl border border-border bg-card p-6 shadow-sm z-10 text-left">
                   <h2 className="text-lg font-medium">Today’s vibe</h2>
                   <p className="mt-2 text-sm text-muted-foreground">
                     “Have you tried turning it off and on again?” but make it
