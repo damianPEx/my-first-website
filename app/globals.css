@@ -55,11 +55,11 @@
 :root, .dark {
   /* 80s Arcade Theme */
   --background: rgba(0, 0, 0, 0.5);
-  --foreground: #00ff00;
+  --foreground: #d9d9d9;
   --card: rgba(0, 0, 0, 0.5);
-  --card-foreground: #00ff00;
+  --card-foreground: #d9d9d9;
   --popover: rgba(0, 0, 0, 0.5);
-  --popover-foreground: #00ff00;
+  --popover-foreground: #d9d9d9;
   --primary: #00ff00;
   --primary-foreground: #000000;
   --secondary: #002200;
@@ -79,10 +79,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+  h1, h2, h3, h4, h5, h6 {
+    color: #00ff00;
+    text-transform: uppercase;
+    text-shadow: 
+      2px 2px 0px #008800,
+      4px 4px 0px #ff8800,
+      6px 6px 0px #aa3300;
+    letter-spacing: 1px;
+  }
   body {
     @apply text-foreground;
     background-color: #000000;
-    text-shadow: 2px 2px 0px #003300;
   }
   a {
     @apply transition-all duration-300 border border-transparent rounded;

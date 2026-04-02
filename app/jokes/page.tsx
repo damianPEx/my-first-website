@@ -55,23 +55,23 @@ const jokes = [
 
 export default function JokesPage() {
   return (
-    <div className="min-h-screen px-4 py-12">
+    <div className="min-h-screen px-6 py-16 sm:px-10 sm:py-24">
       {/* Header */}
-      <div className="mb-12 text-center">
+      <div className="mb-16 text-center">
         <Link
           href="/"
-          className="mb-8 inline-block border-2 border-[#00ff00] px-4 py-2 text-xs text-[#00ff00] transition-all hover:bg-[#00ff00] hover:text-black"
+          className="mb-8 inline-block border-2 border-[#00ff00] px-6 py-3 text-sm text-[#00ff00] transition-all hover:bg-[#00ff00] hover:text-black"
         >
           &lt; BACK
         </Link>
-        <h1 className="mt-6 text-2xl leading-relaxed text-[#00ff00] [text-shadow:0_0_10px_#00ff00,2px_2px_0px_#003300]">
+        <h1 className="mt-8 text-3xl leading-relaxed">
           *** CLASSIC QUOTES ***
         </h1>
-        <p className="mt-4 text-xs text-[#00aa00]">
+        <p className="mt-6 text-sm text-[#00aa00]">
           &gt; INSERT COIN TO CONTINUE
         </p>
         {/* Scanline decoration */}
-        <div className="mx-auto mt-4 h-px w-64 bg-[#00ff00] opacity-60" />
+        <div className="mx-auto mt-6 h-px w-64 bg-[#00ff00] opacity-60" />
       </div>
 
       {/* Jokes Grid */}
@@ -93,7 +93,7 @@ export default function JokesPage() {
 
               {/* Speech bubble */}
               <div
-                className="relative border-4 p-5"
+                className="relative border-4 p-5 bg-black/50 backdrop-blur-sm"
                 style={{
                   borderColor: joke.color,
                   boxShadow: `4px 4px 0px ${joke.color}, inset 0 0 20px rgba(0,0,0,0.8)`,
@@ -118,8 +118,7 @@ export default function JokesPage() {
                 />
 
                 <p
-                  className="text-xs leading-6"
-                  style={{ color: joke.color }}
+                  className="text-sm leading-8 text-foreground"
                 >
                   "{joke.quote}"
                 </p>
